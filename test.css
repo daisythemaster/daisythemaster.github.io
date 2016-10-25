@@ -1,4 +1,5 @@
 body{
+	background-image: url('dark_wood.png');
 
 }
 
@@ -21,7 +22,10 @@ li{
 	margin-bottom: 10px;
 	border: solid 8px black;
 	text-align: center;
+	background-color: #8E41D5; 
 }
+
+h1{ font-size: 60px; font-family: "Passion One"; color: #FFBC00; font-weight: bold; }
 
 #Header hi{
 	
@@ -31,6 +35,7 @@ li{
 	margin-bottom: 10px;
 	border: solid 8px black;
 	text-align: center;
+	background-color: #8E41D5; 
 
 }
 
@@ -43,6 +48,7 @@ li{
 	float: left;
 	padding-bottom: 8px;
 	text-align: center;
+	background-color: #8E41D5; 
 }
 
 #LeftNav img{
@@ -64,6 +70,7 @@ li{
 	border: solid 8px black;
 	padding: 15px;
 	text-align: center;
+	background-color: #8E41D5; 
 }
 #Footer{
     width: 700px;
@@ -72,4 +79,5 @@ li{
 	margin-bottom: 10px;
 	border: solid 8px black;
 	text-align: center;
+	background-color: #8E41D5; 
 }
