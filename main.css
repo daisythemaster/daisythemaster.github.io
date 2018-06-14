@@ -22,3 +22,19 @@ body {
     flex-flow: row wrap;
     justify-content: center;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+nav div {
+    height: 10px;
+    color: white;
+    margin: 10px;
+}
+
+nav section {
+    display: flex;
+    margin-left: auto;
+}
