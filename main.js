@@ -75,7 +75,7 @@
             let speed = 5;
             let yLoc = parseInt(snowball.style.top);
             yLoc += speed;
-            if (yLoc < 1000) {
+            if (yLoc < 2000) {
                 snowball.style.top = yLoc + "px";
             } else {
                 snowball.remove();
