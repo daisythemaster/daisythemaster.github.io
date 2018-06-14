@@ -11,7 +11,14 @@ body {
     position: absolute;
 }
 
+.model_image {
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+}
+
 #model_container {
-    color: white;
-    height: 1000px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }

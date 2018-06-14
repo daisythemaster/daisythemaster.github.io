@@ -28,18 +28,23 @@
     window.onload = function() {
         setInterval(newSnowBall, 200);
         setInterval(fall, 50);
-        getModels();
+        displayModels();
     };
     
-    function getModels(){
-        fetch(MODELS_BASE_URL + "?name=Cara", {credentials: "include"})
-            .then(checkStatus)
-            .then(displayModels)
-            .catch(console.log());
-    }
     
-    function displayModels(text) {
-        $("model_container").innerText = text;
+    function displayModels() {
+        let models = ["Adriana", "Anja", "Cara", "Cate",
+                      "Freja", "Ruby"];
+        for (let i = 0; i < models.length; i++) {
+            let image = document.createElement("img");
+            image.src = "image/" + models[i] + ".jpg";
+            image.alt = models[i];
+            image.classList.add("model_image");
+            $("model_container").appendChild(image);
+            let name = document.createElement("h4");
+            name.innerText = models[i];
+            $("model_container").appendChild(name);
+        }
     }
     
     function checkStatus(response) {
