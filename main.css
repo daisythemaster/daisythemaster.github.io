@@ -10,3 +10,8 @@ body {
     border-radius: 50%;
     position: absolute;
 }
+
+#model_container {
+    color: white;
+    height: 1000px;
+}

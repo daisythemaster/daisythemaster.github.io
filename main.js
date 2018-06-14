@@ -10,6 +10,8 @@
 */
 (function() {
     
+    const MODELS_BASE_URL = "main.php";
+    
     /**
     * Returns the element that has the ID attribute with the specified value.
     * @param {string} id - element ID
@@ -26,15 +28,34 @@
     window.onload = function() {
         setInterval(newSnowBall, 200);
         setInterval(fall, 50);
-        
+        getModels();
     };
+    
+    function getModels(){
+        fetch(MODELS_BASE_URL + "?name=Cara", {credentials: "include"})
+            .then(checkStatus)
+            .then(displayModels)
+            .catch(console.log());
+    }
+    
+    function displayModels(text) {
+        $("model_container").innerText = text;
+    }
+    
+    function checkStatus(response) {
+        if (response.status >= 200 && response.status < 300) {
+            return response.text();
+        } else {
+            return response.text().then(Promise.reject.bind(Promise));
+        }
+    }
     
     
     function newSnowBall() {
         let div = document.createElement("div");
         let diameter = randomDiam();
         div.classList.add("snowball");
-        div.style.left = randomNum(1000 - diameter) + "px";
+        div.style.left = randomNum(1300 - diameter) + "px";
         div.style.top = 0 + "px";
         div.style.height = diameter + "px";
         div.style.width = diameter + "px";
