@@ -10,8 +10,6 @@
 */
 (function() {
     
-    const MODELS_BASE_URL = "main.php";
-    
     /**
     * Returns the element that has the ID attribute with the specified value.
     * @param {string} id - element ID
@@ -46,15 +44,6 @@
             $("model_container").appendChild(name);
         }
     }
-    
-    function checkStatus(response) {
-        if (response.status >= 200 && response.status < 300) {
-            return response.text();
-        } else {
-            return response.text().then(Promise.reject.bind(Promise));
-        }
-    }
-    
     
     function newSnowBall() {
         let div = document.createElement("div");
