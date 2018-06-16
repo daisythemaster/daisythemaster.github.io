@@ -28,7 +28,7 @@ nav {
     flex-direction: row;
 }
 
-nav div {
+nav div a {
     height: 10px;
     color: white;
     margin: 10px;
@@ -37,4 +37,39 @@ nav div {
 nav section {
     display: flex;
     margin-left: auto;
+}
+
+#input-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+header {
+    margin-top: 5%;
+}
+input {
+    margin: 15px;
+    background-color: black;
+    color: white;
+    height: 20px;
+    border: black;
+}
+
+#login {
+    width: 80px;
+    height: 40px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: "Eater";
+}
+
+a img {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+
+footer h3 {
+    font-size: 10px;
 }
